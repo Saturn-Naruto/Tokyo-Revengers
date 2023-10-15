@@ -1,0 +1,172 @@
+<div class="loader-wrapper">
+    <div class="loader">
+        <div class="loader loader-inner"></div>
+    </div>
+</div>
+-------------------------------------------------------------------------------------------------------------------------------------------
+.loader-wrapper {
+    width: 60px;
+    height: 60px;
+}
+.loader{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: 10px solid #162534;
+    border-top-color: #4bc8eb;
+    border-bottom-color: #f13a8f;
+    border-radius: 50%;
+    animation: rotate 5s linear infinite;
+}
+.loader-inner {
+    border-top-color: #36f372;
+    border-bottom-color: #36f372;
+    animation-duration: 2.5s;
+}
+@keyframes rotate {
+    0%{
+        transform: scale(1) rotate(360deg);
+    }
+    50%{
+        transform: scale(.8) rotate(-360deg);
+    }
+    100%{
+        transform: scale(1) rotate(360deg);
+    }
+}
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+<div class="spinner"></div>
+------------------------------------------------------------------------------------------------------------------------------------------
+/* body {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+}
+.header-web {
+    background: #007765;
+    width: 100%;
+    height: 84px;
+    position: fixed;
+    display: flex;
+}
+.header-line {
+    margin: auto;
+    justify-content: space-between;
+    padding-left: 230px;
+    padding-right: 55px;
+    padding-top: 20px;
+    padding-bottom: 19px;
+    background: no-repeat center top / cover;
+}
+
+.logo {
+    float: left;
+    padding-right: 48px;
+}
+.menu {
+    padding-top: 14px;
+    padding-left:650px;
+    display: flex;
+    position: fixed;
+}
+
+.menu nav a{
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+}
+
+.image1 {
+    top: 84px;
+    height: 201px;
+    width: 100%;
+    position: absolute;
+    background: url(img/image.jpg);
+} */
+.spinner {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.spinner::before,
+.spinner:after {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+}
+.spinner:before {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        0deg, #ff00cc 0%,
+        #333399 100%    );
+        animation: spin .5s infinite linear;
+}
+.spinner:after {
+    width: 85%;
+    height: 85%;
+    background-color: #151515;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+<div class="icon-wrapper" data-number="1"> 
+        <img src="https://cdn.icon-icons.com/icons2/3005/PNG/512/notification_alarm_bell_icon_188194.png" alt="" class="bell-icon">
+    </div>
+---------------------------------------------------------------------------------------------------------
+.icon-wrapper{
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+.icon-wrapper::after{
+    content: attr(data-number);
+    width: 20px;
+    height: 20px;
+    background-color: #d32b2b;
+    color: #fff;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    opacity: 0;
+    transform: translateY(3px); 
+}
+.icon-wrapper:hover::after{
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .25s;
+    transform: .25s;
+}
+.bell-icon{
+    max-width: 100%;
+}
+.icon-wrapper:hover .bell-icon{
+    animation: shake 1s forwards;
+}
+@keyframes shake{
+    10%{
+        transform: rotate(15deg);
+    }
+    20%{
+        transform: rotate(-15deg);
+    }
+    30%{
+        transform: rotate(15deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+}
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||

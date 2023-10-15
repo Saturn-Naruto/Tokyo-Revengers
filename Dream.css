@@ -1,0 +1,17 @@
+.rounded-img {
+    width: 60%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(26, 9, 9, 2);
+    padding: 0.5em;
+    margin-bottom: 0.8em;
+}
+.card {
+    border-radius: 1em;
+    text-align: center;
+}
+.card:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.positionofimg img {
+    text-align: left;
+}
